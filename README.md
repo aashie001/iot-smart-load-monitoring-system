@@ -40,35 +40,35 @@ Households usually see only a monthly electricity bill and have no idea which ap
 ### Overview
 
 
-![Overview](screenshots/01-overview.png)
+![Overview](screenshots/01-overview.jpeg)
 
 
 
 ### Appliances
 
 
-![Appliances](screenshots/02-appliance.jpg)
+![Appliances](screenshots/02-appliance.jpeg)
 
 
 
 ### Fault Detection
 
 
-![Fault Detection](screenshots/03-fault-detection.jpg)
+![Fault Detection](screenshots/03-fault-detection.jpeg)
 
 
 
 ### Data
 
 
-![Data](screenshots/04-data.jpg)
+![Data](screenshots/04-data.jpeg)
 
 
 
 ### Analysis
 
 
-![Analysis](screenshots/05-analysis.jpg)
+![Analysis](screenshots/05-analysis.jpeg)
 
 
 
