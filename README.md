@@ -28,12 +28,17 @@ Households usually see only a monthly electricity bill and have no idea which ap
 - Planned (hardware): ESP32, SCT013 current sensor, ZMPT101B voltage sensor, MQTT
 
 ## Working Principle
-- The user switches appliances ON/OFF in the sidebar. Each appliance has a fixed rated power (e.g. Ceiling Fan 75 W)
-- Total load is built from the appliances that are ON, with small random variation to imitate real readings
-- Real power = V x I x PF, and apparent power = V x I
-- The dashboard refreshes automatically every 3 seconds to show live readings and graphs
-- Cost is calculated from energy used and the electricity rate set by the user
-- Fault checks run on the readings and show alerts on the Fault Detection tab
+## Working Principle
+- Each appliance has a rated power and power factor (e.g. Ceiling Fan: 75 W, PF 0.85)
+- When an appliance is ON, its real power is simulated as the rated value with about ±5% random variation. Voltage is simulated randomly between 215 V and 235 V
+- Per appliance: apparent power S = P / PF, reactive power Q = sqrt(S^2 - P^2), current = S / V
+- Household totals: P and Q of all appliances are added, then total S = sqrt(P^2 + Q^2), total PF = P / S, total current = S / V
+- Energy (kWh) is accumulated over time. A "time acceleration" slider (default 600x) makes simulated time run faster than real time so energy and cost build up visibly in a demo
+- Cost = energy x electricity rate set by the user
+- The dashboard auto-refreshes every 3 seconds
+- Load status: NORMAL below 4 A, MODERATE between 4 A and 8 A, HIGH above 8 A
+- Fault checks: overload (above 125% of rated power), low power factor (0.15 below rated), leakage (power drawn while OFF), forgotten-ON (continuously ON longer than the set hours)
+- Overload, low PF and leakage are injected for demo using the "Fault simulation" panel in the sidebar
 - Note: voltage, power factor and appliance loads are simulated. In the final system, real sensors will provide these values
 ## Screenshots
 
