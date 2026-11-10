@@ -40,7 +40,7 @@ Households usually see only a monthly electricity bill and have no idea which ap
 ### Overview
 
 
-![Overview](screenshots/01-overview.jpg)
+![Overview](screenshots/01-overview.png)
 
 
 
