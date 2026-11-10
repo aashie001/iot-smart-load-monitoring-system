@@ -35,11 +35,45 @@ Households usually see only a monthly electricity bill and have no idea which ap
 - Cost is calculated from energy used and the electricity rate set by the user
 - Fault checks run on the readings and show alerts on the Fault Detection tab
 - Note: voltage, power factor and appliance loads are simulated. In the final system, real sensors will provide these values
-
 ## Screenshots
-(will add below)
-'''
+
+### Overview
+
+
+![Overview](screenshots/01-overview.jpg)
+
+
+
+### Appliances
+
+
+![Appliances](screenshots/02-appliance.jpg)
+
+
+
+### Fault Detection
+
+
+![Fault Detection](screenshots/03-fault-detection.jpg)
+
+
+
+### Data
+
+
+![Data](screenshots/04-data.jpg)
+
+
+
+### Analysis
+
+
+![Analysis](screenshots/05-analysis.jpg)
+
+
+
 ## How to Run
+```
 pip install -r requirements.txt
 streamlit run app2.py
-'''
+```
